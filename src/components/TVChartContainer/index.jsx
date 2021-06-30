@@ -15,7 +15,7 @@ export class TVChartContainer extends React.PureComponent {
 		interval: '15',
 		containerId: 'tv_chart_container',
 		// datafeedUrl: 'https://demo_feed.tradingview.com',
-		libraryPath: '../../charting_library/',
+		libraryPath: '../../charting_library/', 
 		chartsStorageUrl: 'https://saveload.tradingview.com',
 		chartsStorageApiVersion: '1.1',
 		clientId: 'tradingview.com',

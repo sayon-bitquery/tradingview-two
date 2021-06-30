@@ -26,7 +26,7 @@ export default {
                 mode: 'cors',
                 headers: {
                     "Content-Type": "application/json",
-                    "X-API-KEY": "YOUR UNIQUE API KEY"
+                    "X-API-KEY": "BQYUGuoO6tZKM20I0lfBNCTEC4ouBCT1"
                 }
             }
         ); 
@@ -58,7 +58,7 @@ export default {
         }
     }, 
     // This method is used by the charting library to get historical data for the symbol. 
-    getBars: async(symbolInfo, resolution, from, to, onHistoryCallback, onErrorCallback, first) =>{
+    getBars: async(symbolInfo, resolution, onHistoryCallback, onErrorCallback, first) =>{
         try{
             if (resolution==='1D') {
                 resolution = 1440;
@@ -66,15 +66,15 @@ export default {
             const response2 = await axios.post(Bitquery.endpoint, {
                 query: Bitquery.GET_COIN_BARS,
                 variables: {
-                    "from": new Date(from).toISOString(),
-                    "to": new Date(to).toISOString(),
+                    "from": new Date("2021-06-20T07:23:21.000Z").toISOString(),
+                    "to": new Date("2021-06-23T15:23:21.000Z").toISOString(),
                     "interval": Number(resolution),
                     "tokenAddress": symbolInfo.ticker
                 },
                 mode: 'cors',
                 headers: {
                     "Content-Type": "application/json",
-                    "X-API-KEY": "YOUR UNIQUE API KEY"
+                    "X-API-KEY": "BQYUGuoO6tZKM20I0lfBNCTEC4ouBCT1"
                 }
             })
 
