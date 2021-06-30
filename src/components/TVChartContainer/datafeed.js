@@ -26,7 +26,7 @@ export default {
                 mode: 'cors',
                 headers: {
                     "Content-Type": "application/json",
-                    "X-API-KEY": "BQYUGuoO6tZKM20I0lfBNCTEC4ouBCT1"
+                    "X-API-KEY": "YOUR UNIQUE API KEY"
                 }
             }
         ); 
