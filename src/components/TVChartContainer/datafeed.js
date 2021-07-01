@@ -77,7 +77,9 @@ export default {
                     "X-API-KEY": "YOUR UNIQUE API KEY"
                 }
             })
-
+           
+            console.log(response2.data.data.ethereum.dexTrades[0].high);
+            
             const bars = response2.data.data.ethereum.dexTrades.map(el => ({
                 time: new Date(el.timeInterval.minute).getTime(), // date string in api response
                 low: el.low,
